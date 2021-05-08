@@ -1,9 +1,9 @@
 {
-  "name": "rx-broadcast-channel",
+  "name": "rxjs-broadcast-channel",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lucasdornelasv/rx-broadcast-channel"
+    "url": "https://github.com/lucasdornelasv/rxjs-broadcast-channel"
   },
   "author": "Lucas Dornelas",
   "license": "MIT",
