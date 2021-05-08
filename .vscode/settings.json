@@ -1,0 +1,10 @@
+{
+  "search.exclude": {
+    "**/dist": true,
+    "**/dist/esm": true,
+    "**/dist/esm5": true,
+    "**/dist/types": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}

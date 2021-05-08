@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/umd",
+    "module": "UMD",
+    "target": "ES2015",
+    "tsBuildInfoFile": "node_modules/.cache/.tsbuildinfo.esm"
+  }
+}

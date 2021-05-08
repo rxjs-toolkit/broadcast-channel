@@ -1,0 +1,55 @@
+{
+  "name": "rx-broadcast-channel",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasdornelasv/rx-broadcast-channel"
+  },
+  "author": "Lucas Dornelas",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "dist/esm",
+    "dist/umd",
+    "dist/types"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    }
+  },
+  "main": "dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "es2015": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "dev": "npm run clean && tsc --build --watch",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:types",
+    "build:types": "tsc --project tsconfig.types.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:umd": "tsc --project tsconfig.umd.json",
+    "test": "jest",
+    "clean": "rimraf dist && rimraf node_modules/.cache",
+    "prepublishOnly": "npm login --access=public && npm run build"
+  },
+  "devDependencies": {
+    "@types/jest": "26.0.22",
+    "jest": "26.6.3",
+    "jest-watch-typeahead": "0.6.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "26.5.4",
+    "ts-node": "^9.1.1",
+    "typescript": "4.2.4",
+    "typescript-snapshots-plugin": "^1.7.0"
+  },
+  "prettier": "@prisma-labs/prettier-config",
+  "importSorter": {
+    "emptyLinesBetweenGroups": false
+  },
+  "dependencies": {
+    "rxjs": "^7.0.0",
+    "tslib": "^2.2.0"
+  }
+}
