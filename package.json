@@ -1,6 +1,6 @@
 {
   "name": "rxjs-broadcast-channel",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/lucasdornelasv/rxjs-broadcast-channel"
@@ -36,12 +36,14 @@
   },
   "devDependencies": {
     "@types/jest": "26.0.22",
+    "@types/node": "^18.13.0",
     "jest": "26.6.3",
     "jest-watch-typeahead": "0.6.2",
     "rimraf": "^3.0.2",
+    "rxjs": "^7.8.0",
     "ts-jest": "26.5.4",
-    "ts-node": "^9.1.1",
-    "typescript": "4.2.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
     "typescript-snapshots-plugin": "^1.7.0"
   },
   "prettier": "@prisma-labs/prettier-config",
@@ -49,7 +51,6 @@
     "emptyLinesBetweenGroups": false
   },
   "dependencies": {
-    "rxjs": "^7.0.0",
-    "tslib": "^2.2.0"
+    "tslib": "^2.5.0"
   }
 }
