@@ -1,5 +1,5 @@
 {
-  "name": "rxjs-broadcast-channel",
+  "name": "@rxjs-toolkit/broadcast-channel",
   "version": "0.1.1",
   "repository": {
     "type": "git",
@@ -24,6 +24,12 @@
   "es2015": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
   "scripts": {
+    "format": "prettier --write . && format-imports src && format-imports tests",
+    "format:imports:check": "format-imports --check src tests",
+    "format:prettier:check": "prettier --check .",
+    "format:check": "npm run format:imports:check && npm run format:prettier:check",
+    "lint": "eslint . --ext .ts,.tsx --fix",
+    "lint:check": "eslint . --ext .ts,.tsx --max-warnings 0",
     "dev": "npm run clean && tsc --build --watch",
     "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:types",
     "build:types": "tsc --project tsconfig.types.json",
@@ -32,25 +38,32 @@
     "build:umd": "tsc --project tsconfig.umd.json",
     "test": "jest",
     "clean": "rimraf dist && rimraf node_modules/.cache",
-    "prepublishOnly": "npm login --access=public && npm run build"
+    "prepublishOnly": "npm login --scope=@rxjs-toolkit && npm run build"
   },
   "devDependencies": {
+    "@homer0/prettier-plugin-jsdoc": "^6.0.2",
     "@types/jest": "26.0.22",
     "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "format-imports": "^3.2.2",
     "jest": "26.6.3",
     "jest-watch-typeahead": "0.6.2",
+    "prettier": "^2.8.4",
     "rimraf": "^3.0.2",
-    "rxjs": "^7.8.0",
     "ts-jest": "26.5.4",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5",
     "typescript-snapshots-plugin": "^1.7.0"
   },
-  "prettier": "@prisma-labs/prettier-config",
   "importSorter": {
     "emptyLinesBetweenGroups": false
   },
   "dependencies": {
+    "rxjs": "^7.8.0",
     "tslib": "^2.5.0"
   }
 }
