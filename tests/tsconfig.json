@@ -1,8 +1,9 @@
 {
-  "extends": "../tsconfig.json",
-  "references": [{ "path": ".." }],
-  "include": ["."],
-  "compilerOptions": {
-    "tsBuildInfoFile": "node_modules/.cache/.tsbuildinfo.test"
-  }
+	"extends": "../tsconfig.json",
+	"include": ["../jest.config.ts", "../jest.setup.ts", "../mocks/**.ts", "."],
+	"compilerOptions": {
+		"target": "ES2023",
+		"types": ["node", "jest"],
+		"tsBuildInfoFile": "node_modules/.cache/.tsbuildinfo.test"
+	}
 }
